@@ -1,0 +1,647 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway:400,700");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Raleway, sans-serif;
+}
+
+body {
+  background-color: #00dbde;
+  background-image: linear-gradient(90deg, #4a9d9e 0%, #fb00ffad 100%);
+}
+
+.topnav,
+.logInContainer {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.topnav {
+  display: flex;
+  background-color: #333;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  padding: 10px;
+}
+
+.logInContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 100px;
+}
+
+#logOutButton {
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 25px;
+}
+
+.fa.fa-sign-out {
+  margin-left: 5px;
+}
+
+@media screen and (max-width: 768px) {
+  .topnav,
+  .logInContainer {
+    padding: 5px;
+  }
+  .data-info,
+  .svgGraphicsContainer {
+    flex-direction: column; /* Stack containers vertically */
+    align-items: center;
+    margin: 10px;
+  }
+
+  .progressionContainer {
+    margin-left: 10px !important;
+    margin-right: 10px !important;
+    margin-top: 0px !important;
+  }
+}
+
+@media screen and (max-width: 1068px) {
+  .data-info {
+    flex-direction: column; /* Stack containers vertically */
+    align-items: center;
+    margin: 10px;
+  }
+}
+
+.allKoodContainer {
+  width: 100%;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+}
+
+.exerciseName {
+  background: linear-gradient(45deg, #ff00cc, #3333ff, #33ff33, #ffcc00);
+  background-size: 400% 400%;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  animation: gradientAnimation 10s ease infinite;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.svgGraphicsContainer {
+  display: flex;
+  margin-top: 50px;
+  justify-content: space-between;
+  border: 5px solid green;
+  animation: color-change 5s infinite ease-in-out;
+}
+
+.upDownContainer svg,
+.progressionContainer svg {
+  max-width: 100%;
+  height: auto;
+}
+
+@keyframes color-change {
+  0% {
+    border-color: #013220;
+  }
+  50% {
+    border-color: green;
+  }
+  100% {
+    border-color: #013220;
+  }
+}
+
+.basicStatsContainer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.upDownContainer {
+  position: relative;
+}
+
+.progressionContainer {
+  position: relative;
+  margin-left: 50px;
+  margin-right: 10px;
+  margin-top: 20px;
+}
+
+.screen {
+  display: flex;
+  background: linear-gradient(90deg, #5d54a4, #7c78b8);
+  position: relative;
+  height: 600px;
+  width: 360px;
+  box-shadow: 0px 0px 24px #5c5696;
+}
+
+.screen__content {
+  z-index: 1;
+  position: relative;
+  height: 100%;
+}
+
+.screen__background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  -webkit-clip-path: inset(0 0 0 0);
+  clip-path: inset(0 0 0 0);
+  overflow: hidden;
+}
+
+.screen__background__shape {
+  transform: rotate(45deg);
+  position: absolute;
+}
+
+.screen__background__shape1 {
+  height: 520px;
+  width: 520px;
+  background: #fff;
+  top: -50px;
+  right: 120px;
+  border-radius: 0 72px 0 0;
+}
+
+.screen__background__shape2 {
+  height: 220px;
+  width: 220px;
+  background: #6c63ac;
+  top: -172px;
+  right: 0;
+  border-radius: 32px;
+}
+
+.screen__background__shape3 {
+  height: 540px;
+  width: 190px;
+  background: linear-gradient(270deg, #5d54a4, #6a679e);
+  top: -24px;
+  right: 0;
+  border-radius: 32px;
+}
+
+.screen__background__shape4 {
+  height: 400px;
+  width: 200px;
+  background: #7e7bb9;
+  top: 420px;
+  right: 50px;
+  border-radius: 60px;
+}
+
+.login {
+  width: 320px;
+  padding: 30px;
+  padding-top: 156px;
+}
+
+.login__field {
+  padding: 20px 0px;
+  position: relative;
+}
+
+.login__icon {
+  position: absolute;
+  top: 30px;
+  color: #7875b5;
+}
+
+.login__input {
+  border: none;
+  border-bottom: 2px solid #d1d1d4;
+  background: none;
+  padding: 10px;
+  padding-left: 24px;
+  font-weight: 700;
+  width: 75%;
+  transition: 0.2s;
+}
+
+.login__input:active,
+.login__input:focus,
+.login__input:hover {
+  outline: none;
+  border-bottom-color: #6a679e;
+}
+
+.login__submit {
+  background: #fff;
+  font-size: 14px;
+  margin-top: 30px;
+  padding: 16px 20px;
+  border-radius: 26px;
+  border: 1px solid #d4d3e8;
+  text-transform: uppercase;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  color: #4c489d;
+  box-shadow: 0px 2px 2px #5c5696;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.login__submit:active,
+.login__submit:focus,
+.login__submit:hover {
+  border-color: #6a679e;
+  outline: none;
+}
+
+.button__icon {
+  font-size: 24px;
+  margin-left: auto;
+  color: #7875b5;
+}
+
+/* Basic information container */
+
+.data-info {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  overflow-x: auto;
+  align-items: flex-end;
+  overflow: hidden;
+  width: 100%;
+}
+
+.box {
+  display: flex;
+  background-color: white;
+  height: 150px;
+  flex: 0 0 auto;
+  width: 250px;
+  border-radius: 8px;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column; /* Display content in a column layout */
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.box:hover {
+  box-shadow: 0 0 10px 5px rgba(0, 0, 255, 0.5); /* Change values as needed */
+}
+
+.box i {
+  font-size: 40px;
+}
+
+.box .data {
+  text-align: center;
+}
+
+.box .data span {
+  font-size: 30px;
+}
+
+#progressionChart {
+  border: 2px solid #e3b778;
+}
+
+#pieChart {
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+h1 {
+  margin: 0;
+}
+
+/* Snackbar styling */
+#snackbar {
+  visibility: hidden;
+  min-width: 250px;
+  margin-left: -125px;
+  background-color: #d60a0a;
+  color: #fff;
+  text-align: center;
+  border-radius: 2px;
+  padding: 16px;
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+  bottom: 30px;
+  font-size: 17px;
+}
+#snackbar.show {
+  visibility: visible;
+  -webkit-animation: fadein 0.5s;
+  animation: fadein 0.5s;
+}
+#snackbar.hide {
+  -webkit-animation: fadeout 0.5s;
+  animation: fadeout 0.5s;
+}
+@-webkit-keyframes fadein {
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+  to {
+    bottom: 30px;
+    opacity: 1;
+  }
+}
+@keyframes fadein {
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+  to {
+    bottom: 30px;
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fadeout {
+  from {
+    bottom: 30px;
+    opacity: 1;
+  }
+  to {
+    bottom: 0;
+    opacity: 0;
+  }
+}
+@keyframes fadeout {
+  from {
+    bottom: 30px;
+    opacity: 1;
+  }
+  to {
+    bottom: 0;
+    opacity: 0;
+  }
+}
+
+/* Main user info entry styling */
+.box {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.5s forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Adjust other styles for icons, data, etc. as needed */
+
+/* Adding delay to each box */
+.box:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.box:nth-child(2) {
+  animation-delay: 0.5s; /* Delay the animation by 1 second for the second box */
+}
+
+.box:nth-child(3) {
+  animation-delay: 1s; /* Delay the animation by 2 seconds for the third box */
+}
+
+.box:nth-child(4) {
+  animation-delay: 1.5s; /* Delay the animation by 2 seconds for the third box */
+}
+
+.data-info {
+  overflow: visible;
+}
+
+/* Style the dropdown button */
+.dropbtn {
+  background-color: #f1f1f1;
+  padding: 10px;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.myBtn {
+  margin-top: 20px;
+  align-items: center;
+  appearance: none;
+  background-color: #fff;
+  border-radius: 24px;
+  border-style: none;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 3px 5px -1px,
+    rgba(0, 0, 0, 0.14) 0 6px 10px 0, rgba(0, 0, 0, 0.12) 0 1px 18px 0;
+  box-sizing: border-box;
+  color: #3c4043;
+  cursor: pointer;
+  display: inline-flex;
+  fill: currentcolor;
+  font-size: 14px;
+  font-weight: 500;
+  height: 48px;
+  justify-content: center;
+  letter-spacing: 0.25px;
+  line-height: normal;
+  max-width: 100%;
+  overflow: visible;
+  padding: 2px 24px;
+  position: relative;
+  text-align: center;
+  text-transform: none;
+  transition: box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 15ms linear 30ms, transform 270ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: auto;
+  will-change: transform, opacity;
+  z-index: 0;
+}
+
+.myBtn:hover {
+  background: #f6f9fe;
+  color: #174ea6;
+}
+
+.myBtn:active {
+  box-shadow: 0 4px 4px 0 rgb(60 64 67 / 30%),
+    0 8px 12px 6px rgb(60 64 67 / 15%);
+  outline: none;
+}
+
+.myBtn:focus {
+  outline: none;
+  border: 2px solid #4285f4;
+}
+
+.myBtn:not(:disabled) {
+  box-shadow: rgba(60, 64, 67, 0.3) 0 1px 3px 0,
+    rgba(60, 64, 67, 0.15) 0 4px 8px 3px;
+}
+
+.myBtn:not(:disabled):hover {
+  box-shadow: rgba(60, 64, 67, 0.3) 0 2px 3px 0,
+    rgba(60, 64, 67, 0.15) 0 6px 10px 4px;
+}
+
+.myBtn:not(:disabled):focus {
+  box-shadow: rgba(60, 64, 67, 0.3) 0 1px 3px 0,
+    rgba(60, 64, 67, 0.15) 0 4px 8px 3px;
+}
+
+.myBtn:not(:disabled):active {
+  box-shadow: rgba(60, 64, 67, 0.3) 0 4px 4px 0,
+    rgba(60, 64, 67, 0.15) 0 8px 12px 6px;
+}
+
+.myBtn:disabled {
+  box-shadow: rgba(60, 64, 67, 0.3) 0 1px 3px 0,
+    rgba(60, 64, 67, 0.15) 0 4px 8px 3px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: hidden; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 50%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#explainAuditor {
+  font-size: 14px;
+}
+
+/* Style the table */
+#auditorTable {
+  width: 100%;
+  border-collapse: collapse; /* Remove default spacing between table cells */
+  border: 1px solid #ccc; /* Add a border around the table */
+}
+
+/* Style the table header */
+#auditorTable thead th {
+  background-color: #f2f2f2; /* Background color for header */
+  border: 1px solid #ccc; /* Add borders to header cells */
+  padding: 10px; /* Add padding to header cells */
+  text-align: left; /* Align text to the left in header cells */
+}
+
+/* Style the table body rows */
+#auditorTable tbody tr {
+  border: 1px solid #ccc; /* Add borders to table rows */
+}
+
+/* Style the table body cells */
+#auditorTable tbody td {
+  padding: 10px; /* Add padding to table cells */
+}
+
+#xGisMap {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.iframe-wrapper {
+  max-width: 100%; /* Ensures it doesn't overflow the parent container */
+  margin: 0 auto; /* Centers the container */
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 1000px) {
+  .iframe-wrapper {
+    width: 100%;
+  }
+
+  .iframe-wrapper iframe {
+    width: 100%; /* Adjusts width to 100% for smaller screens */
+    margin-bottom: 5px !important;
+    margin-top: 5px !important;
+  }
+}

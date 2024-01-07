@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>GraphQL</title>
+    <link
+      type="image/png"
+      sizes="16x16"
+      rel="icon"
+      href="/graph-ql/assets/favicon-xLxxXeNK.png?"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <script type="module" crossorigin src="/graph-ql/assets/index-1tvTmSbE.js"></script>
+    <link rel="stylesheet" crossorigin href="/graph-ql/assets/index-iJuBXKDs.css">
+  </head>
+
+  <body>
+    <div class="topnav">
+      <h1 class="exerciseName">GraphQL</h1>
+      <button id="logOutButton">Log out<i class="fa fa-sign-out"></i></button>
+    </div>
+
+    <div class="allKoodContainer">
+      <div class="basicStatsContainer">
+        <div class="data-info">
+          <div class="box">
+            <i class="fa-solid fa-user-tie"></i>
+            <div class="data">
+              <p>Name</p>
+              <span id="nameSpan"></span>
+            </div>
+          </div>
+          <div class="box">
+            <i class="fa-solid fa-star"></i>
+            <div class="data">
+              <p>XP</p>
+              <span id="xpSpan"></span>
+            </div>
+          </div>
+          <div class="box">
+            <i class="fa-solid fa-check"></i>
+            <div class="data">
+              <p>Audits</p>
+              <span id="auditSpan"></span>
+            </div>
+          </div>
+          <div class="box">
+            <i class="fa-solid fa-person-running"></i>
+            <div class="data">
+              <p>Days active</p>
+              <span id="activeSpan"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <button id="myBtnId" class="myBtn" role="button">
+        Frequent auditors❤️
+      </button>
+
+      <!-- The Modal -->
+      <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+          <span id="close1" class="close">&times;</span>
+          <p id="explainAuditor">
+            This shows the login handlers for your top 10 most frequent auditors
+            and how many times they have succesfully audited your work
+          </p>
+          <table id="auditorTable">
+            <thead>
+              <tr>
+                <th>auditors❤️</th>
+                <th>times</th>
+              </tr>
+            </thead>
+            <tbody id="auditorTableBody"></tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="svgGraphicsContainer">
+        <div class="upDownContainer">
+          <svg
+            width="500"
+            height="500"
+            viewBox="0 0 200 200"
+            xmlns="http://www.w3.org/2000/svg"
+            id="pieChart"
+          ></svg>
+        </div>
+
+        <div class="progressionContainer">
+          <div class="dropdown">
+            <button class="dropbtn">Select Date Range</button>
+            <div class="dropdown-content">
+              <a href="#" data-value="all">All Time</a>
+              <a href="#" data-value="3months">Last 3 Months</a>
+              <a href="#" data-value="6months">Last 6 Months</a>
+              <a href="#" data-value="9months">Last 9 Months</a>
+            </div>
+          </div>
+
+          <svg
+            width="700"
+            height="400"
+            viewBox="0 0 700 400"
+            id="progressionChart"
+          >
+            <rect x="0" y="0" width="100%" height="100%" fill="white"></rect>
+            <g id="chartArea" transform="translate(50, 30)">
+              <path
+                id="line"
+                fill="none"
+                stroke="steelblue"
+                stroke-width="3"
+              ></path>
+              <g id="xAxis" class="axis"></g>
+              <g id="yAxis" class="axis"></g>
+            </g>
+          </svg>
+        </div>
+      </div>
+
+      <div class="iframe-wrapper">
+          <iframe width="1000" height="500" id="xGisMap"></iframe>
+      </div>
+
+    </div>
+
+    <div class="logInContainer">
+      <div class="screen">
+        <div class="screen__content">
+          <form id="koodCredentials" class="login" method="post">
+            <div class="login__field">
+              <i class="login__icon fas fa-user"></i>
+              <input
+                type="text"
+                class="login__input"
+                name="login"
+                placeholder="username or email"
+                required
+              />
+            </div>
+            <div class="login__field">
+              <i class="login__icon fas fa-lock"></i>
+              <input
+                type="password"
+                class="login__input"
+                name="password"
+                placeholder="password"
+                required
+              />
+            </div>
+            <button type="submit" class="button login__submit">
+              <span class="button__text">Log In</span>
+              <i class="button__icon fas fa-chevron-right"></i>
+            </button>
+          </form>
+        </div>
+        <div class="screen__background">
+          <span
+            class="screen__background__shape screen__background__shape4"
+          ></span>
+          <span
+            class="screen__background__shape screen__background__shape3"
+          ></span>
+          <span
+            class="screen__background__shape screen__background__shape2"
+          ></span>
+          <span
+            class="screen__background__shape screen__background__shape1"
+          ></span>
+        </div>
+      </div>
+      <div id="snackbar"></div>
+    </div>
+  </body>
+</html>
