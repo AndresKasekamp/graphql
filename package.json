@@ -21,8 +21,8 @@
   "description": "Using GraphQL in kood/Jõhvi",
   "repository": {
     "type": "git",
-    "url": "https://github.com/AndresKasekamp/graph-ql"
+    "url": "https://github.com/AndresKasekamp/graphql"
   },
   "keywords": ["GraphQL", "d3", "web development"],
-  "homepage": "https://andreskasekamp.github.io/graph-ql/"
+  "homepage": "https://andreskasekamp.github.io/graphql/"
 }

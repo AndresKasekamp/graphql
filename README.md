@@ -16,7 +16,7 @@ The objective of this project is to learn the GraphQL query language, by creatin
 
 ### 📡 Live hosting
 
-Just go to <https://andreskasekamp.github.io/graph-ql/>
+Just go to <https://andreskasekamp.github.io/graphql/>
 
 ### ✈️ Terminal
 
