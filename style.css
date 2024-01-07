@@ -573,14 +573,21 @@ h1 {
 /* Modal Content/Box */
 .modal-content {
   background-color: #fefefe;
-  margin: 15% auto; /* 15% from the top and centered */
+  margin: 10% auto; /* 15% from the top and centered */
   padding: 20px;
   border: 1px solid #888;
   width: 50%; /* Could be more or less, depending on screen size */
+  max-height: 60%;
+  overflow-y: auto;
 }
 
-.modal .modal-content{
-  max-height: calc(100vh - 80px);
+@media screen and (max-width: 600px) {
+  /* Adjustments for smaller screens */
+  .modal-content {
+    width: 90%; /* Adjusted width for smaller screens */
+    max-height: 90%; /* Set a maximum height for smaller screens */
+    margin: 5% auto; /* Center the modal more towards the top */
+  }
 }
 
 
